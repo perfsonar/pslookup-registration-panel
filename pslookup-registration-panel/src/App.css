@@ -1,0 +1,772 @@
+/* Breakpoint > 768px */
+@media (min-width: 769px) {
+  body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px; /* or keep your 32px 32px */
+    box-sizing: border-box;
+    background: var(--surface-1, #19191A);
+    border: 2px solid var(--copy, #FFF);
+    border-radius: 20px;
+  }
+
+  .MainContainer {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .FormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    gap: 18px;
+  }
+
+
+  .InputBox {
+    width: 100%;
+    min-width: 0;
+    min-height: 34px;
+    padding: var(--size-border-width-xlarge, 8px)
+             var(--size-spacing-xlarge, 64px)
+             var(--size-border-width-xlarge, 8px)
+             var(--size-spacing-xsmall, 8px);
+    font-size: 16px;
+    font-family: "SourceSans3-Regular";
+    color: var(--copy, #FFF);
+    background: var(--surface-2, #000);
+    border: 1px solid var(--color-core-slate-100, #C3C7D9);
+    border-radius: var(--size-border-width-none, 0px);
+    box-sizing: border-box;
+    appearance: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .InputLabel {
+    font-family: "SourceSans3-Regular";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 170%;
+    letter-spacing: -0.18px;
+    color: var(--copy, #FFF);
+    align-self: stretch;
+  }
+
+  .InputGroup {
+    display: flex;
+    width: 100%;
+    max-width: calc(100% - 64px);
+    min-width: 0;
+    flex-shrink: 1;
+    margin-top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+  }
+
+  /* Reusable row group layout */
+  .LocationGroup,
+  .CoordinateGroup,
+  .SiteGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: calc(100% - 64px);
+  }
+
+  .LocationGroup .InputGroup,
+  .CoordinateGroup .InputGroup,
+  .SiteGroup .InputGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+
+  .LocationGroup .InputGroup.sidebar,
+  .CoordinateGroup .InputGroup.sidebar,
+  .SiteGroup .InputGroup.sidebar {
+    flex: 0 1 25%;
+  }
+
+  .LocationGroup .InputGroup.main,
+  .CoordinateGroup .InputGroup.main,
+  .SiteGroup .InputGroup.main {
+    flex: 1 1 50%;
+  }
+
+  /* Reusable row group layout for Labeled Inputs with Additional Chips*/
+  .NodeGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: calc(100% - 64px);
+  }
+
+  .NodeGroup > .InputGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    flex: 1 1 0;
+    align-items: flex-start;
+    align-self: flex-start; 
+  }
+
+  .NodeGroup .InputGroup.sidebar {
+    flex: 0 1 25%;
+  }
+
+  .NodeGroup .InputGroup.main {
+    flex: 1 1 50%;
+  }
+
+  /* Divider*/
+
+  .Divider {
+    width: 90%;
+    max-width: 90%;
+    height: 2px;
+    background: var(--copy-alt, #C2C2C2);
+    border-radius: var(--size-border-width-large, 6px);
+    margin: 16px 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+  }
+
+
+  .DividerWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+
+  /*Chip Stuff (The green little boxes underenath fields like Node Roles*/
+
+  .ChipContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+    max-width: 100%;
+  }
+
+  .Chip {
+    display: flex;
+    height: 32px;
+    padding: 4px 8px 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 16px;
+    border: 1px solid var(--color-core-black-600, #454547);
+    background: rgba(49, 182, 63, 0.50);
+    color: white;
+    font-family: "SourceSans3-Regular";
+  }
+
+  .ChipClose {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+
+  /* Privacy Policy & Check Box*/
+
+  .PrivacyPolicy {
+    font-family: "SourceSans3-Regular";
+    color: var(--copy-alt, #C2C2C2);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+    height: 81px;
+    flex-shrink: 0;
+    align-self: stretch;
+
+  }
+  
+  .PolicyLink {
+    color: #31b63f;
+    color: var(--color-core-green-400, #13C230);
+
+    font-family: "SourceSans3-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .CheckboxWrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .Checkbox {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--copy-alt, #C2C2C2);
+    background: var(--surface-1, #19191A);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .CheckmarkIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+  }
+
+  .Checkbox:checked {
+    background-color: #31b63f;
+  }
+
+  .CheckboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "SourceSans3-Regular";
+    color: var(--copy, #FFF);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+
+
+  .CheckboxLabel {
+    display: flex;
+    align-items: center;
+    color: var(--copy, #FFF);
+    font-family: "SourceSans3-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; 
+    letter-spacing: -0.24px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 1.5;
+  }
+
+
+  /* Save and Cancel Button Bar */
+  .ButtonBar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 32px;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .SaveButton {
+    border-radius: 18px;
+    border: 1px solid #31B63F;
+    background: #31B63F;
+    color: var(--copy, #FFF);
+    display: flex;
+    min-width: 44px;
+    min-height: 40px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-family: "SourceSans3-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .SaveIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .SaveButton:hover {
+    background-color: #2ba738;
+  }
+
+  .SaveButton:active {
+    background-color: #249231;
+  }
+  .CancelButton {
+  display: flex;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--copy, #FFF);
+  background-color: transparent;
+  border-radius: 18px;
+  border: 1px solid #31B63F;
+  background: var(--surface-1, #19191A);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.24px;
+  font-family: "SourceSans3-Regular";
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.CancelIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.CancelButton:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.CancelButton:active {
+  background-color: #444;
+}
+}
+
+
+
+
+
+
+
+
+
+/* Breakpoint < 769px */
+@media (max-width: 768px) {
+  body {
+    border-radius: 20px;
+    min-height: 100vh;
+    border: 2px solid var(--copy, #FFF);
+    background: var(--surface-1, #19191A);
+    padding: 32px 32px;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .MainContainer {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .FormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    max-width: 1423px;
+    height: auto;
+    gap: 18px;
+    padding: 16px;
+  }
+
+
+  .InputBox {
+    width: 100%;
+    min-width: 0;
+    min-height: 34px;
+    padding: var(--size-border-width-xlarge, 8px)
+             var(--size-spacing-xlarge, 64px)
+             var(--size-border-width-xlarge, 8px)
+             var(--size-spacing-xsmall, 8px);
+    font-size: 16px;
+    font-family: "SourceSans3-Regular";
+    color: var(--copy, #FFF);
+    background: var(--surface-2, #000);
+    border: 1px solid var(--color-core-slate-100, #C3C7D9);
+    border-radius: var(--size-border-width-none, 0px);
+    box-sizing: border-box;
+    appearance: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .InputLabel {
+    font-family: "SourceSans3-Regular";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 170%;
+    letter-spacing: -0.18px;
+    color: var(--copy, #FFF);
+    align-self: stretch;
+  }
+
+  .InputGroup {
+    display: flex;
+    min-width: 0;
+    flex-shrink: 1;
+    margin-top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Reusable row group layout */
+  .LocationGroup,
+  .CoordinateGroup,
+  .SiteGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .LocationGroup .InputGroup,
+  .CoordinateGroup .InputGroup,
+  .SiteGroup .InputGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+
+  .LocationGroup .InputGroup.sidebar,
+  .CoordinateGroup .InputGroup.sidebar,
+  .SiteGroup .InputGroup.sidebar {
+    flex: 0 1 25%;
+  }
+
+  .LocationGroup .InputGroup.main,
+  .CoordinateGroup .InputGroup.main,
+  .SiteGroup .InputGroup.main {
+    flex: 1 1 50%;
+  }
+
+  /* Reusable row group layout for Labeled Inputs with Additional Chips*/
+  .NodeGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: calc(100% - 64px);
+  }
+
+  .NodeGroup > .InputGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    flex: 1 1 0;
+    align-items: flex-start;
+    align-self: flex-start; 
+  }
+
+  .NodeGroup .InputGroup.sidebar {
+    flex: 0 1 25%;
+  }
+
+  .NodeGroup .InputGroup.main {
+    flex: 1 1 50%;
+  }
+
+  /* Divider*/
+
+  .Divider {
+    width: 100%;
+    max-width: 100%;
+    height: 2px;
+    background: var(--copy-alt, #C2C2C2);
+    border-radius: var(--size-border-width-large, 6px);
+    margin: 16px 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+  }
+
+
+  .DividerWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+
+  /*Chip Stuff (The green little boxes underenath fields like Node Roles*/
+
+  .ChipContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+    max-width: 100%;
+  }
+
+  .Chip {
+    display: flex;
+    height: 32px;
+    padding: 4px 8px 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 16px;
+    border: 1px solid var(--color-core-black-600, #454547);
+    background: rgba(49, 182, 63, 0.50);
+    color: white;
+    font-family: "SourceSans3-Regular";
+  }
+
+  .ChipClose {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+
+  /* Privacy Policy & Check Box*/
+
+  .PrivacyPolicy {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+    font-family: "SourceSans3-Regular";
+    color: var(--copy-alt, #C2C2C2);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+    height: 81px;
+    flex-shrink: 0;
+    align-self: stretch;
+
+  }
+  
+  .PolicyLink {
+    color: #31b63f;
+    color: var(--color-core-green-400, #13C230);
+
+    font-family: "SourceSans3-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .CheckboxWrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .Checkbox {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--copy-alt, #C2C2C2);
+    background: var(--surface-1, #19191A);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .CheckmarkIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+  }
+
+  .Checkbox:checked {
+    background-color: #31b63f;
+  }
+
+  .CheckboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "SourceSans3-Regular";
+    color: var(--copy, #FFF);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+
+
+  .CheckboxLabel {
+    display: flex;
+    align-items: center;
+    color: var(--copy, #FFF);
+    font-family: "SourceSans3-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; 
+    letter-spacing: -0.24px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 1.5;
+  }
+
+    /* Save and Cancel Button Bar */
+    .ButtonBar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      padding: 16px;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .SaveButton {
+      border-radius: 18px;
+      border: 1px solid #31B63F;
+      background: #31B63F;
+      color: var(--copy, #FFF);
+      display: flex;
+      min-width: 44px;
+      min-height: 40px;
+      padding: 8px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-family: "SourceSans3-Regular";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: -0.24px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .SaveIcon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .SaveButton:hover {
+      background-color: #2ba738;
+    }
+
+    .SaveButton:active {
+      background-color: #249231;
+    }
+    .CancelButton {
+    display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--copy, #FFF);
+    background-color: transparent;
+    border-radius: 18px;
+    border: 1px solid #31B63F;
+    background: var(--surface-1, #19191A);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+    font-family: "SourceSans3-Regular";
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .CancelIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .CancelButton:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .CancelButton:active {
+    background-color: #444;
+  }
+}

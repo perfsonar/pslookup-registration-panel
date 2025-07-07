@@ -1,0 +1,7 @@
+[
+  {"label": "--Select A Policy--", "value": "0"},
+  {"label": "Public", "value": "a"},
+  {"label": "R&E Only", "value": "b"},
+  {"label": "Private", "value": "c"}, 
+  {"label": "Limited", "value": "d"}
+]
