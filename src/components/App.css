@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 /* Breakpoint > 768px */
 @media (min-width: 769px) {
   body {
@@ -41,7 +43,7 @@
              var(--size-border-width-xlarge, 8px)
              var(--size-spacing-xsmall, 8px);
     font-size: 16px;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     color: var(--copy, #FFF);
     background: var(--surface-2, #000);
     border: 1px solid var(--color-core-slate-100, #C3C7D9);
@@ -54,7 +56,7 @@
   }
 
   .InputLabel {
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -182,7 +184,7 @@
     border: 1px solid var(--color-core-black-600, #454547);
     background: rgba(49, 182, 63, 0.50);
     color: white;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
   }
 
   .ChipClose {
@@ -198,7 +200,7 @@
   /* Privacy Policy & Check Box*/
 
   .PrivacyPolicy {
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     color: var(--copy-alt, #C2C2C2);
     text-align: center;
     font-size: 16px;
@@ -216,7 +218,7 @@
     color: #31b63f;
     color: var(--color-core-green-400, #13C230);
 
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -271,7 +273,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     color: var(--copy, #FFF);
     font-size: 14px;
     cursor: pointer;
@@ -283,7 +285,7 @@
     display: flex;
     align-items: center;
     color: var(--copy, #FFF);
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -317,7 +319,7 @@
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -358,7 +360,7 @@
   font-weight: 700;
   line-height: 100%;
   letter-spacing: -0.24px;
-  font-family: "SourceSans3-Regular";
+  font-family: "Source Sans 3";
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -430,7 +432,7 @@
              var(--size-border-width-xlarge, 8px)
              var(--size-spacing-xsmall, 8px);
     font-size: 16px;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     color: var(--copy, #FFF);
     background: var(--surface-2, #000);
     border: 1px solid var(--color-core-slate-100, #C3C7D9);
@@ -443,7 +445,7 @@
   }
 
   .InputLabel {
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -570,7 +572,7 @@
     border: 1px solid var(--color-core-black-600, #454547);
     background: rgba(49, 182, 63, 0.50);
     color: white;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
   }
 
   .ChipClose {
@@ -589,7 +591,7 @@
     width: 100%;
     max-width: 100%;
     margin-bottom: 32px;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     color: var(--copy-alt, #C2C2C2);
     text-align: center;
     font-size: 16px;
@@ -607,7 +609,7 @@
     color: #31b63f;
     color: var(--color-core-green-400, #13C230);
 
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -662,7 +664,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     color: var(--copy, #FFF);
     font-size: 14px;
     cursor: pointer;
@@ -674,7 +676,7 @@
     display: flex;
     align-items: center;
     color: var(--copy, #FFF);
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -709,7 +711,7 @@
       align-items: center;
       gap: 8px;
       font-size: 14px;
-      font-family: "SourceSans3-Regular";
+      font-family: "Source Sans 3";
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
@@ -750,7 +752,7 @@
     font-weight: 700;
     line-height: 100%;
     letter-spacing: -0.24px;
-    font-family: "SourceSans3-Regular";
+    font-family: "Source Sans 3";
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
   }

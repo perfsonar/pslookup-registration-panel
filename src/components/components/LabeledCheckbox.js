@@ -1,3 +1,6 @@
+
+import React from "react";
+
 export default function LabeledCheckbox({ id, label, checked, onChange }) {
   return (
     <label htmlFor={id} className="CheckboxLabel">

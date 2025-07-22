@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function LabeledSelect({ label, id, options = [] }) {
   return (
     <div className="InputGroup">
