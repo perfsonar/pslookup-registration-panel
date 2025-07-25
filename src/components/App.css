@@ -1,28 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
+
+
 /* Breakpoint > 768px */
-@media (min-width: 769px) {
-  body {
+
+
+  .layout-desktop {
     height: 100%;
-    min-height: 100vh;
     margin: 0;
-    padding: 32px; /* or keep your 32px 32px */
+    overflow: auto;
+    padding: 32px;
     box-sizing: border-box;
     background: var(--surface-1, #19191A);
-    border: 2px solid var(--copy, #FFF);
-    border-radius: 20px;
   }
 
-  .MainContainer {
+  .layout-desktop .MainContainer {
     width: 100%;
-    min-height: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     box-sizing: border-box;
+    border: 2px solid var(--copy, #FFF);
+    border-radius: 20px;
   }
 
-  .FormContainer {
+  .layout-desktop .FormContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +39,7 @@
   }
 
 
-  .InputBox {
+  .layout-desktop .InputBox {
     width: 100%;
     min-width: 0;
     min-height: 34px;
@@ -55,7 +60,7 @@
     white-space: nowrap;
   }
 
-  .InputLabel {
+  .layout-desktop .InputLabel {
     font-family: "Source Sans 3";
     font-size: 16px;
     font-weight: 400;
@@ -66,7 +71,7 @@
     align-self: stretch;
   }
 
-  .InputGroup {
+  .layout-desktop .InputGroup {
     display: flex;
     width: 100%;
     max-width: calc(100% - 64px);
@@ -80,9 +85,9 @@
   }
 
   /* Reusable row group layout */
-  .LocationGroup,
-  .CoordinateGroup,
-  .SiteGroup {
+  .layout-desktop .LocationGroup,
+  .layout-desktop .CoordinateGroup,
+  .layout-desktop .SiteGroup {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -91,29 +96,29 @@
     max-width: calc(100% - 64px);
   }
 
-  .LocationGroup .InputGroup,
-  .CoordinateGroup .InputGroup,
-  .SiteGroup .InputGroup {
+  .layout-desktop .LocationGroup .InputGroup,
+  .layout-desktop .CoordinateGroup .InputGroup,
+  .layout-desktop .SiteGroup .InputGroup {
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
     flex: 1 1 0;
   }
 
-  .LocationGroup .InputGroup.sidebar,
-  .CoordinateGroup .InputGroup.sidebar,
-  .SiteGroup .InputGroup.sidebar {
+  .layout-desktop .LocationGroup .InputGroup.sidebar,
+  .layout-desktop .CoordinateGroup .InputGroup.sidebar,
+  .layout-desktop .SiteGroup .InputGroup.sidebar {
     flex: 0 1 25%;
   }
 
-  .LocationGroup .InputGroup.main,
-  .CoordinateGroup .InputGroup.main,
-  .SiteGroup .InputGroup.main {
+  .layout-desktop .LocationGroup .InputGroup.main,
+  .layout-desktop .CoordinateGroup .InputGroup.main,
+  .layout-desktop .SiteGroup .InputGroup.main {
     flex: 1 1 50%;
   }
 
   /* Reusable row group layout for Labeled Inputs with Additional Chips*/
-  .NodeGroup {
+  .layout-desktop .NodeGroup {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -122,7 +127,7 @@
     max-width: calc(100% - 64px);
   }
 
-  .NodeGroup > .InputGroup {
+  .layout-desktop .NodeGroup > .layout-desktop .InputGroup {
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
@@ -131,17 +136,17 @@
     align-self: flex-start; 
   }
 
-  .NodeGroup .InputGroup.sidebar {
+  .layout-desktop .NodeGroup .InputGroup.sidebar {
     flex: 0 1 25%;
   }
 
-  .NodeGroup .InputGroup.main {
+  .layout-desktop .NodeGroup .InputGroup.main {
     flex: 1 1 50%;
   }
 
   /* Divider*/
 
-  .Divider {
+  .layout-desktop .Divider {
     width: 90%;
     max-width: 90%;
     height: 2px;
@@ -156,7 +161,7 @@
   }
 
 
-  .DividerWrapper {
+  .layout-desktop .DividerWrapper {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -165,7 +170,7 @@
 
   /*Chip Stuff (The green little boxes underenath fields like Node Roles*/
 
-  .ChipContainer {
+  .layout-desktop .ChipContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
@@ -173,7 +178,7 @@
     max-width: 100%;
   }
 
-  .Chip {
+  .layout-desktop .Chip {
     display: flex;
     height: 32px;
     padding: 4px 8px 4px 12px;
@@ -187,7 +192,7 @@
     font-family: "Source Sans 3";
   }
 
-  .ChipClose {
+  .layout-desktop .ChipClose {
     background: none;
     border: none;
     color: white;
@@ -199,7 +204,7 @@
 
   /* Privacy Policy & Check Box*/
 
-  .PrivacyPolicy {
+  .layout-desktop .PrivacyPolicy {
     font-family: "Source Sans 3";
     color: var(--copy-alt, #C2C2C2);
     text-align: center;
@@ -214,7 +219,7 @@
 
   }
   
-  .PolicyLink {
+  .layout-desktop .PolicyLink {
     color: #31b63f;
     color: var(--color-core-green-400, #13C230);
 
@@ -235,16 +240,16 @@
     cursor: pointer;
   }
 
-  .CheckboxWrapper {
+  .layout-desktop .CheckboxWrapper {
     position: relative;
     width: 20px;
     height: 20px;
     flex-shrink: 0;
   }
 
-  .Checkbox {
+  .layout-desktop .Checkbox {
     appearance: none;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     border-radius: 8px;
     border: 2px solid var(--copy-alt, #C2C2C2);
@@ -255,7 +260,7 @@
     display: block;
   }
 
-  .CheckmarkIcon {
+  .layout-desktop .CheckmarkIcon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -265,11 +270,11 @@
     pointer-events: none;
   }
 
-  .Checkbox:checked {
+  .layout-desktop .Checkbox:checked {
     background-color: #31b63f;
   }
 
-  .CheckboxLabel {
+  .layout-desktop .CheckboxLabel {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -281,7 +286,7 @@
 
 
 
-  .CheckboxLabel {
+  .layout-desktop .CheckboxLabel {
     display: flex;
     align-items: center;
     color: var(--copy, #FFF);
@@ -298,7 +303,7 @@
 
 
   /* Save and Cancel Button Bar */
-  .ButtonBar {
+  .layout-desktop .ButtonBar {
     display: flex;
     justify-content: flex-end;
     padding: 0 32px;
@@ -306,7 +311,7 @@
     margin-bottom: 32px;
   }
 
-  .SaveButton {
+  .layout-desktop .SaveButton {
     border-radius: 18px;
     border: 1px solid #31B63F;
     background: #31B63F;
@@ -329,20 +334,20 @@
     transition: background-color 0.2s ease;
   }
 
-  .SaveIcon {
+  .layout-desktop .SaveIcon {
     width: 24px;
     height: 24px;
     object-fit: contain;
   }
 
-  .SaveButton:hover {
+  .layout-desktop .SaveButton:hover {
     background-color: #2ba738;
   }
 
-  .SaveButton:active {
+  .layout-desktop .SaveButton:active {
     background-color: #249231;
   }
-  .CancelButton {
+  .layout-desktop .CancelButton {
   display: flex;
   min-width: 44px;
   min-height: 44px;
@@ -365,22 +370,20 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.CancelIcon {
+.layout-desktop .CancelIcon {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
 
-.CancelButton:hover {
+.layout-desktop .CancelButton:hover {
   background-color: #333;
   color: #fff;
 }
 
-.CancelButton:active {
+.layout-desktop .CancelButton:active {
   background-color: #444;
 }
-}
-
 
 
 
@@ -390,27 +393,27 @@
 
 
 /* Breakpoint < 769px */
-@media (max-width: 768px) {
-  body {
-    border-radius: 20px;
-    min-height: 100vh;
-    border: 2px solid var(--copy, #FFF);
+ .layout-mobile {
     background: var(--surface-1, #19191A);
     padding: 32px 32px;
     box-sizing: border-box;
-    height: auto;
+    height: 100%;
   }
 
-  .MainContainer {
+  .layout-mobile .MainContainer {
     width: 100%;
-    min-height: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     box-sizing: border-box;
+    border: 2px solid var(--copy, #FFF);
+    border-radius: 20px;
   }
 
-  .FormContainer {
+  .layout-mobile .FormContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -423,7 +426,7 @@
   }
 
 
-  .InputBox {
+  .layout-mobile .InputBox {
     width: 100%;
     min-width: 0;
     min-height: 34px;
@@ -444,7 +447,7 @@
     white-space: nowrap;
   }
 
-  .InputLabel {
+  .layout-mobile .InputLabel {
     font-family: "Source Sans 3";
     font-size: 16px;
     font-weight: 400;
@@ -455,7 +458,7 @@
     align-self: stretch;
   }
 
-  .InputGroup {
+  .layout-mobile .InputGroup {
     display: flex;
     min-width: 0;
     flex-shrink: 1;
@@ -468,9 +471,9 @@
   }
 
   /* Reusable row group layout */
-  .LocationGroup,
-  .CoordinateGroup,
-  .SiteGroup {
+  .layout-mobile .LocationGroup,
+  .layout-mobile .CoordinateGroup,
+  .layout-mobile .SiteGroup {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -479,29 +482,29 @@
     max-width: 100%;
   }
 
-  .LocationGroup .InputGroup,
-  .CoordinateGroup .InputGroup,
-  .SiteGroup .InputGroup {
+  .layout-mobile .LocationGroup .InputGroup,
+  .layout-mobile .CoordinateGroup .InputGroup,
+  .layout-mobile .SiteGroup .InputGroup {
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
     flex: 1 1 0;
   }
 
-  .LocationGroup .InputGroup.sidebar,
-  .CoordinateGroup .InputGroup.sidebar,
-  .SiteGroup .InputGroup.sidebar {
+  .layout-mobile .LocationGroup .InputGroup.sidebar,
+  .layout-mobile .CoordinateGroup .InputGroup.sidebar,
+  .layout-mobile .SiteGroup .InputGroup.sidebar {
     flex: 0 1 25%;
   }
 
-  .LocationGroup .InputGroup.main,
-  .CoordinateGroup .InputGroup.main,
-  .SiteGroup .InputGroup.main {
+  .layout-mobile .LocationGroup .InputGroup.main,
+  .layout-mobile .CoordinateGroup .InputGroup.main,
+  .layout-mobile .SiteGroup .InputGroup.main {
     flex: 1 1 50%;
   }
 
   /* Reusable row group layout for Labeled Inputs with Additional Chips*/
-  .NodeGroup {
+  .layout-mobile .NodeGroup {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -510,7 +513,7 @@
     max-width: calc(100% - 64px);
   }
 
-  .NodeGroup > .InputGroup {
+  .layout-mobile .NodeGroup > .InputGroup {
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
@@ -519,17 +522,17 @@
     align-self: flex-start; 
   }
 
-  .NodeGroup .InputGroup.sidebar {
+  .layout-mobile .NodeGroup .InputGroup.sidebar {
     flex: 0 1 25%;
   }
 
-  .NodeGroup .InputGroup.main {
+  .layout-mobile .NodeGroup .InputGroup.main {
     flex: 1 1 50%;
   }
 
   /* Divider*/
 
-  .Divider {
+  .layout-mobile .Divider {
     width: 100%;
     max-width: 100%;
     height: 2px;
@@ -544,7 +547,7 @@
   }
 
 
-  .DividerWrapper {
+  .layout-mobile .DividerWrapper {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -553,7 +556,7 @@
 
   /*Chip Stuff (The green little boxes underenath fields like Node Roles*/
 
-  .ChipContainer {
+  .layout-mobile .ChipContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
@@ -561,7 +564,7 @@
     max-width: 100%;
   }
 
-  .Chip {
+  .layout-mobile .Chip {
     display: flex;
     height: 32px;
     padding: 4px 8px 4px 12px;
@@ -575,7 +578,7 @@
     font-family: "Source Sans 3";
   }
 
-  .ChipClose {
+  .layout-mobile .ChipClose {
     background: none;
     border: none;
     color: white;
@@ -587,7 +590,7 @@
 
   /* Privacy Policy & Check Box*/
 
-  .PrivacyPolicy {
+  .layout-mobile .PrivacyPolicy {
     width: 100%;
     max-width: 100%;
     margin-bottom: 32px;
@@ -605,7 +608,7 @@
 
   }
   
-  .PolicyLink {
+  .layout-mobile .PolicyLink {
     color: #31b63f;
     color: var(--color-core-green-400, #13C230);
 
@@ -626,14 +629,14 @@
     cursor: pointer;
   }
 
-  .CheckboxWrapper {
+  .layout-mobile .CheckboxWrapper {
     position: relative;
     width: 20px;
     height: 20px;
     flex-shrink: 0;
   }
 
-  .Checkbox {
+  .layout-mobile .Checkbox {
     appearance: none;
     width: 100%;
     height: 100%;
@@ -646,7 +649,7 @@
     display: block;
   }
 
-  .CheckmarkIcon {
+  .layout-mobile .CheckmarkIcon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -656,11 +659,11 @@
     pointer-events: none;
   }
 
-  .Checkbox:checked {
+  .layout-mobile .Checkbox:checked {
     background-color: #31b63f;
   }
 
-  .CheckboxLabel {
+  .layout-mobile .CheckboxLabel {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -672,7 +675,7 @@
 
 
 
-  .CheckboxLabel {
+  .layout-mobile .CheckboxLabel {
     display: flex;
     align-items: center;
     color: var(--copy, #FFF);
@@ -688,7 +691,7 @@
   }
 
     /* Save and Cancel Button Bar */
-    .ButtonBar {
+    .layout-mobile .ButtonBar {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -698,7 +701,7 @@
       margin-bottom: 32px;
     }
 
-    .SaveButton {
+    .layout-mobile .SaveButton {
       border-radius: 18px;
       border: 1px solid #31B63F;
       background: #31B63F;
@@ -721,20 +724,21 @@
       transition: background-color 0.2s ease;
     }
 
-    .SaveIcon {
+    .layout-mobile .SaveIcon {
       width: 24px;
       height: 24px;
       object-fit: contain;
     }
 
-    .SaveButton:hover {
+    .layout-mobile .SaveButton:hover {
       background-color: #2ba738;
     }
 
-    .SaveButton:active {
+    .layout-mobile .SaveButton:active {
       background-color: #249231;
     }
-    .CancelButton {
+
+    .layout-mobile .CancelButton {
     display: flex;
     min-width: 44px;
     min-height: 44px;
@@ -757,18 +761,17 @@
     transition: background-color 0.2s ease, color 0.2s ease;
   }
 
-  .CancelIcon {
+  .layout-mobile .CancelIcon {
     width: 24px;
     height: 24px;
     object-fit: contain;
   }
 
-  .CancelButton:hover {
+  .layout-mobile .CancelButton:hover {
     background-color: #333;
     color: #fff;
   }
 
-  .CancelButton:active {
+  .layout-mobile .CancelButton:active {
     background-color: #444;
   }
-}

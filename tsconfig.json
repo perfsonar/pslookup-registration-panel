@@ -5,6 +5,8 @@
       "types"
     ],
     "compilerOptions": {
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
       "jsx": "react",
       "rootDir": "./src",
       "baseUrl": "./src",

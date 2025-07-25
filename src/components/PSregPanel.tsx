@@ -12,6 +12,7 @@ import LabeledCheckbox from "./components/LabeledCheckbox";
 import LabeledInputWithChips from "./components/LabeledInputWithChips";
 import regionOptions from "./data/regionOptions.json";
 import node_policies from "./data/node_policies.json";
+import "./App.css";
 
 interface Props extends PanelProps<SimpleOptions> {}
 
@@ -58,13 +59,18 @@ export const PSregPanel: React.FC<Props> = ({
     );
   }
 
+  const layoutClass = width < 769 ? "layout-mobile" : "layout-desktop";
+
   return (
     <div
       className={cx(
         styles.wrapper,
+        layoutClass,
         css`
           width: ${width}px;
           height: ${height}px;
+          overflow: auto;
+          box-sizing: border-box;
         `
       )}
     >
@@ -196,11 +202,19 @@ export const PSregPanel: React.FC<Props> = ({
         <div className="ButtonBar">
           <button type="submit" className="SaveButton">
             <span>Save</span>
-            <img src="/icons/save.svg" alt="" className="SaveIcon" />
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1zYXZlLWljb24gbHVjaWRlLXNhdmUiPjxwYXRoIGQ9Ik0xNS4yIDNhMiAyIDAgMCAxIDEuNC42bDMuOCAzLjhhMiAyIDAgMCAxIC42IDEuNFYxOWEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMlY1YTIgMiAwIDAgMSAyLTJ6Ii8+PHBhdGggZD0iTTE3IDIxdi03YTEgMSAwIDAgMC0xLTFIOGExIDEgMCAwIDAtMSAxdjciLz48cGF0aCBkPSJNNyAzdjRhMSAxIDAgMCAwIDEgMWg3Ii8+PC9zdmc+"
+              alt=""
+              className="SaveIcon"
+            />
           </button>
           <button type="button" className="CancelButton">
             <span>Cancel</span>
-            <img src="/icons/cancel.svg" alt="" className="CancelIcon" />
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS14LWljb24gbHVjaWRlLXgiPjxwYXRoIGQ9Ik0xOCA2IDYgMTgiLz48cGF0aCBkPSJtNiA2IDEyIDEyIi8+PC9zdmc+"
+              alt=""
+              className="CancelIcon"
+            />
           </button>
         </div>
       </div>
